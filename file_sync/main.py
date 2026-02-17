@@ -1,6 +1,8 @@
+import requests
 def run(config: dict) -> bool:
     try:
         print("Running File Sync Job")
+        print("Requests version:", requests.__version__)
 
         file_name = config.get("file_name")
         directory = config.get("directory", "/tmp")
